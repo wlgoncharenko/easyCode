@@ -82,8 +82,19 @@ let array = Array.from({ length: 35 }).map(
 
 console.log(array); // [ {age:NaN}, {age:3}, {age:NaN}, {age:5}, {age:NaN}, {age:7} ....]
 console.log(array.length); // 35
+// не закончил ... думаю еще
+function solution(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i].ege)) {
+            arr[i]['unknownAge'] = true;
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
 
-function solution(arr) {}
+console.log(solution(array));
 
 let arr = ['privet', 12, {}, [1, 2]];
 let arr2 = ['privet', 12, {}, [1, 2]];
